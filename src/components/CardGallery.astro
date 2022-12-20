@@ -1,0 +1,35 @@
+---
+import Card from "../components/Card.astro";
+import "./scrollbar.css";
+const friedmanquote = String.raw`“The important thing is to make it politically profitable for the wrong people to do the right thing. If it is not politically profitable for the wrong people to do the right thing, the right people will not do the right thing either.”`
+const painequote = String.raw`“Government, even in its best state, is but a necessary evil; in its worst state, an intolerable one.”`
+const bastiatquote = String.raw`“If the natural tendencies of mankind are so bad that it is not safe to permit people to be free, how is it that the tendencies of these organizers are always good? Do not the legislators and their appointed agents also belong to the human race?”`
+const patersonquote = String.raw`“Most of the harm in the world is done by good people, and not by accident, lapse, or omission. It is the result of their deliberate actions, long persevered in, which they hold to be motivated by high ideals toward virtuous ends.”`
+const hayekquote = String.raw`“From the fact that people are very different it follows that, if we treat them equally, the result must be inequality in their actual position, and that the only way to place them in an equal position would be to treat them differently.”`
+const boazquote = String.raw`“It’s the exercise of power, not the exercise of freedom, that requires justification.”`
+const spoonerquote = String.raw`“But whether the Constitution really be one thing, or another, this much is certain - that it has either authorized such a government as we have had, or has been powerless to prevent it. In either case it is unfit to exist.”`
+const sowellquote = String.raw`“The fact that the market is not doing what we wish it would do is no reason to automatically assume that the government would do better.”`
+---
+
+<section class="noscrollbar overflow-x-auto whitespace-nowrap py-10 border-t-4">
+	<div class="w-full inline-block">
+		<div class="flex justify-center">
+			<Card name="Milton Friedman" imagepath="Milton-Friedman.webp" quote={friedmanquote}></Card>
+			<Card name="Thomas Paine" imagepath="Thomas-Paine.jpg" quote={painequote}></Card>
+		</div>
+		<div class="flex justify-center">
+			<Card name="Frederic Bastiat" imagepath="Frederic-Bastiat.jpg" quote={bastiatquote}></Card>
+			<Card name="Isabel Paterson" imagepath="Isabel-Paterson.jpg" quote={patersonquote}></Card>
+		</div>
+	</div>
+	<div class="w-full inline-block">
+		<div class="flex justify-center">
+			<Card name="Thomas Sowell" imagepath="Thomas-Sowell.jpg" quote={sowellquote}></Card>
+			<Card name="David Boaz" imagepath="David-Boaz.jpg" quote={boazquote}></Card>
+		</div>
+		<div class="flex justify-center">
+			<Card name="Lysander Spooner" imagepath="Lysander-Spooner.jpg" quote={spoonerquote}></Card>
+			<Card name="Friedrich Hayek" imagepath="Friedrich-Hayek.jpg" quote={hayekquote}></Card>
+		</div>
+	</div>
+</section>
