@@ -3,6 +3,9 @@ module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
+			backgroundImage: {
+				"meander-pattern": "url('/meander.svg')",
+			},
 			colors: {
 				libyellow: "#F4D35E",
 				libgrey: "#393E41",
@@ -35,6 +38,8 @@ module.exports = {
 					warning: "#F7C326",
 
 					error: "#ef4444",
+
+					"base-content": "#393E41",
 				},
 			},
 		],
