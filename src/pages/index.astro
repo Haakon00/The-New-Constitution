@@ -1,0 +1,55 @@
+---
+import CardGallery from "../components/CardGallery.astro";
+import Morpher from "../components/Morpher";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../components/misc.css";
+---
+
+<MainLayout>
+	<div class="bg-meander-pattern bg-[length:25px] bg-repeat-x h-screen flex items-center">
+		<div class="flex flex-col">
+			<h1 class="noselect text-[7vw] pl-2 text-black font-[Poppins]">The New Constitution</h1>
+			<div class="ml-2 mt-2 text-3xl">
+				<Morpher client:load />
+			</div>
+		</div>
+		<div class="w-full text-center">
+			<img src="/pantheon.svg" class="object-contain w-2/3 mx-auto" alt="Pantheon" />
+			<p class="mb-20 font-semibold text-lg">Creating the foundation for a better future.</p>
+		</div>
+	</div>
+	<CardGallery />
+	<section>
+		<h2 class="noselect text-black text-8xl text-center pt-5 mb-28 font-[poppins]">
+			Why a new constitution?
+		</h2>
+		<div class="flex justify-evenly mb-32">
+			<figure class="flex flex-col justify-center items-center w-[10vw] whitespace-nowrap">
+				<img src="decentralize.webp" alt="" />
+				<div class="text-center">Decentralize Power</div>
+			</figure>
+			<figure class="flex flex-col justify-center items-center w-[10vw] whitespace-nowrap">
+				<img src="decentralize.webp" alt="" />
+				<div class="text-center">Reduce Poverty</div>
+			</figure>
+			<figure class="flex flex-col justify-center items-center w-[10vw] whitespace-nowrap">
+				<img src="decentralize.webp" alt="" />
+				<div class="text-center">Protect Individual Liberty</div>
+			</figure>
+		</div>
+		<div class="flex justify-evenly pb-20">
+			<figure class="flex flex-col justify-center items-center w-[10vw] whitespace-nowrap">
+				<img src="decentralize.webp" alt="" />
+				<div class="text-center">Promote Growth</div>
+			</figure>
+			<figure class="flex flex-col justify-center items-center w-[10vw] whitespace-nowrap">
+				<img src="decentralize.webp" alt="" />
+				<div class="text-center">Better Representation</div>
+			</figure>
+			<figure class="flex flex-col justify-center items-center w-[10vw] whitespace-nowrap">
+				<img src="decentralize.webp" alt="" />
+				<div class="text-center">Fiscal Responsebility</div>
+			</figure>
+		</div>
+	</section>
+</MainLayout>
