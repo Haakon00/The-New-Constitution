@@ -138,7 +138,11 @@ const Morpher = () => {
 		};
 	});
 
-	return <span class="">{state().text}</span>;
+	return (
+		<div class="ml-2 mt-2 text-3xl">
+			<span class="">{state().text}</span>
+		</div>
+	);
 };
 
 export default Morpher;

@@ -6,21 +6,19 @@ import "../components/misc.css";
 ---
 
 <MainLayout>
-	<div class="bg-meander-pattern bg-[length:25px] bg-repeat-x h-screen flex items-center">
+	<div class="bg-meander-pattern bg-[length:25px] bg-repeat-x flex items-center">
 		<div class="flex flex-col">
-			<h1 class="noselect text-[7vw] pl-2 text-black font-[Poppins]">The New Constitution</h1>
-			<div class="ml-2 mt-2 text-3xl">
-				<Morpher client:load />
-			</div>
+			<h1 class="text-[7vw] pl-2 text-black font-[Poppins]">The New Constitution</h1>
+			<Morpher client:load />
 		</div>
-		<div class="w-full text-center">
-			<img src="/pantheon.svg" class="object-contain w-2/3 mx-auto" alt="Pantheon" />
-			<p class="mb-20 font-semibold text-lg">Creating the foundation for a better future.</p>
+		<div class="w-full text-center mt-[30px]">
+			<img src="/justice.svg" class="object-contain w-2/3 mx-auto" alt="Pantheon" />
+			<p class="italic mt-4 font-mono">Creating the foundation for a better future.</p>
 		</div>
 	</div>
 	<CardGallery />
 	<section>
-		<h2 class="noselect text-black text-8xl text-center pt-5 mb-28 font-[poppins]">
+		<h2 class="text-black text-8xl text-center pt-5 mb-28 font-[poppins]">
 			Why a new constitution?
 		</h2>
 		<div class="flex justify-evenly mb-32">
