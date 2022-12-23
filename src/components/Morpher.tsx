@@ -18,6 +18,7 @@ const Morpher = () => {
 			"Ազատություն",
 			"Mākeke kūʻokoʻa",
 			"자유 시장",
+			"چەكلىك ھۆكۈمەت",
 			"Takmörkuð stjórnvöld",
 			"Freedom",
 		],
