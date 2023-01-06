@@ -24,7 +24,7 @@ module.exports = {
 				mytheme: {
 					primary: "#FCA17D",
 
-					secondary: "#000000",
+					secondary: "#0D1821",
 
 					accent: "#F7AEF8",
 
@@ -32,11 +32,11 @@ module.exports = {
 
 					"base-100": "#FFFFDD",
 
-					info: "#3F84E5",
+					info: "#03E1FF",
 
 					success: "#00FFA3",
 
-					warning: "#F7C326",
+					warning: "#FFCC00",
 
 					error: "#ef4444",
 
