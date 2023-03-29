@@ -12,8 +12,9 @@ const sowellquote = String.raw`“The fact that the market is not doing what we 
 ---
 
 <section
+	id="carousel"
 	tabindex="0"
-	class="transscrollbar bg-slate-800 overflow-x-auto whitespace-nowrap py-20 flex bg-meander_light bg-[length:25px] bg-repeat-x"
+	class="bg-slate-800 overflow-x-hidden whitespace-nowrap py-20 flex bg-meander_light bg-[length:25px] bg-repeat-x cursor-grab active:cursor-grabbing"
 >
 	<h2 class="hidden">Quotes</h2>
 	<Card
@@ -65,3 +66,21 @@ const sowellquote = String.raw`“The fact that the market is not doing what we 
 		title="1974 Nobel Laureate in Economics"
 	/>
 </section>
+
+<script>
+	let pressed = false;
+	let carousel = document.getElementById("carousel")!;
+
+	carousel.addEventListener("mousedown", e => {
+		pressed = true;
+	});
+	carousel.addEventListener("mouseup", () => {
+		pressed = false;
+	});
+
+	carousel.addEventListener("mousemove", e => {
+		if (!pressed) return;
+		e.preventDefault();
+		carousel.scrollLeft -= e.movementX;
+	});
+</script>
