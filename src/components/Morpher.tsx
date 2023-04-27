@@ -139,7 +139,7 @@ const Morpher = () => {
 	});
 
 	return (
-		<div class="ml-2 mt-2 text-3xl">
+		<div class="ml-2 mt-2 lg:text-3xl">
 			<span class="">{state().text}</span>
 		</div>
 	);
