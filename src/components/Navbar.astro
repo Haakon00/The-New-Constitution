@@ -1,4 +1,4 @@
-<nav class="navbar bg-base-100">
+<nav class="navbar">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -44,10 +44,12 @@
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">
-			<li><a href="/draft">Draft</a></li>
-			<li><a href="/rationale">Rationale</a></li>
+			<li><a class="active:bg-accent active:text-accent-content" href="/draft">Draft</a></li>
+			<li>
+				<a class="active:bg-accent active:text-accent-content" href="/rationale">Rationale</a>
+			</li>
 			<li tabindex="0">
-				<a>
+				<a class="active:bg-accent active:text-accent-content">
 					Discussion
 					<svg
 						class="fill-current"
@@ -59,8 +61,8 @@
 					</svg>
 				</a>
 				<ul class="p-2 bg-base-100 border border-black w-full">
-					<li><a>Submenu 1</a></li>
-					<li><a>Submenu 2</a></li>
+					<li><a class="active:bg-accent active:text-accent-content">Submenu 1</a></li>
+					<li><a class="active:bg-accent active:text-accent-content">Submenu 2</a></li>
 				</ul>
 			</li>
 		</ul>
