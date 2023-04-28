@@ -14,10 +14,14 @@ import Benefits from "../components/Benefits.astro";
 			<img src="/justice.svg" class="noselect object-contain lg:w-2/3 mx-auto" alt="Lady justice" />
 		</div>
 		<div>
-			<h1 class="text-6xl lg:leading-normal lg:text-[7vw] pl-2 text-black font-[Poppins]">
+			<h1 class="text-[3.5rem] lg:leading-normal pl-2 text-black font-[Poppins] lg:text-[7vw]">
 				The New Constitution
 			</h1>
-			<Morpher client:load />
+			<div class="flex justify-between">
+				<Morpher client:load />
+				<a href="/draft" class="btn bg-accent text-black mr-5 hover:bg-[#00cc81]">Read the draft!</a
+				>
+			</div>
 		</div>
 	</div>
 	<Benefits />
