@@ -17,12 +17,14 @@
 			</label>
 			<ul
 				tabindex="0"
-				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52"
 			>
-				<li><a href="/draft">Draft</a></li>
-				<li><a href="/rationale">Rationale</a></li>
+				<li><a class="active:bg-accent active:text-accent-content" href="/draft">Draft</a></li>
+				<li>
+					<a class="active:bg-accent active:text-accent-content" href="/rationale">Rationale</a>
+				</li>
 				<li tabindex="0">
-					<a class="justify-between">
+					<a class="justify-between active:bg-accent active:text-accent-content">
 						Discussion
 						<svg
 							class="fill-current"
@@ -33,9 +35,9 @@
 							><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
 						</svg>
 					</a>
-					<ul class="p-2">
-						<li><a>Submenu 1</a></li>
-						<li><a>Submenu 2</a></li>
+					<ul class="p-2 bg-primary">
+						<li><a class="active:bg-accent active:text-accent-content">Forum</a></li>
+						<li><a class="active:bg-accent active:text-accent-content">Reddit</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -61,8 +63,8 @@
 					</svg>
 				</a>
 				<ul class="p-2 bg-base-100 border border-black w-full">
-					<li><a class="active:bg-accent active:text-accent-content">Submenu 1</a></li>
-					<li><a class="active:bg-accent active:text-accent-content">Submenu 2</a></li>
+					<li><a class="active:bg-accent active:text-accent-content">Forum</a></li>
+					<li><a class="active:bg-accent active:text-accent-content">Reddit</a></li>
 				</ul>
 			</li>
 		</ul>
