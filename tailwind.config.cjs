@@ -4,8 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				meander_dark: "url('meander_dark.svg')",
-				meander_light: "url('meander_light.svg')",
+				meander_dark: "url('/meander_dark.svg')",
+				meander_light: "url('/meander_light.svg')",
 			},
 			colors: {
 				libyellow: "#F4D35E",
