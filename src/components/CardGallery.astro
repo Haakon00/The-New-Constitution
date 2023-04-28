@@ -9,6 +9,14 @@ const hayekquote = String.raw`“From the fact that people are very different it
 const boazquote = String.raw`“It’s the exercise of power, not the exercise of freedom, that requires justification.”`;
 const spoonerquote = String.raw`“But whether the Constitution really be one thing, or another, this much is certain - that it has either authorized such a government as we have had, or has been powerless to prevent it. In either case it is unfit to exist.”`;
 const sowellquote = String.raw`“The fact that the market is not doing what we wish it would do is no reason to automatically assume that the government would do better.”`;
+import friedman from "../images/portraits/Milton-Friedman.jpg";
+import spooner from "../images/portraits/Lysander-Spooner.jpg";
+import bastiat from "../images/portraits/Frederic-Bastiat.jpg";
+import paine from "../images/portraits/Thomas-Paine.jpg";
+import boaz from "../images/portraits/David-Boaz.jpg";
+import sowell from "../images/portraits/Thomas-Sowell.jpg";
+import paterson from "../images/portraits/Isabel-Paterson.jpg";
+import hayek from "../images/portraits/Friedrich-Hayek.jpg";
 ---
 
 <section
@@ -19,49 +27,44 @@ const sowellquote = String.raw`“The fact that the market is not doing what we 
 	<h2 class="hidden">Quotes</h2>
 	<Card
 		name="Lysander Spooner"
-		imagepath="/src/images/portraits/Lysander-Spooner.jpg"
+		imagepath={spooner}
 		quote={spoonerquote}
 		title="American Abolitionist"
 	/>
 	<Card
 		name="Milton Friedman"
-		imagepath="/src/images/portraits/Milton-Friedman.jpg"
+		imagepath={friedman}
 		quote={friedmanquote}
 		title="1976 Nobel Laureate in Economics"
 	/>
 	<Card
 		name="Frederic Bastiat"
-		imagepath="/src/images/portraits/Frederic-Bastiat.jpg"
+		imagepath={bastiat}
 		quote={bastiatquote}
 		title="French Economist and Lawmaker"
 	/>
-	<Card
-		name="Thomas Paine"
-		imagepath="/src/images/portraits/Thomas-Paine.jpg"
-		quote={painequote}
-		title="American Revolutionary"
-	/>
+	<Card name="Thomas Paine" imagepath={paine} quote={painequote} title="American Revolutionary" />
 	<Card
 		name="David Boaz"
-		imagepath="/src/images/portraits/David-Boaz.jpg"
+		imagepath={boaz}
 		quote={boazquote}
 		title="Executive Vice President of the Cato Institute"
 	/>
 	<Card
 		name="Thomas Sowell"
-		imagepath="/src/images/portraits/Thomas-Sowell.jpg"
+		imagepath={sowell}
 		quote={sowellquote}
 		title="American Economist and Author"
 	/>
 	<Card
 		name="Isabel Paterson"
-		imagepath="/src/images/portraits/Isabel-Paterson.jpg"
+		imagepath={paterson}
 		quote={patersonquote}
 		title="Canadian-American Journalist and Author"
 	/>
 	<Card
 		name="Friedrich Hayek"
-		imagepath="/src/images/portraits/Friedrich-Hayek.jpg"
+		imagepath={hayek}
 		quote={hayekquote}
 		title="1974 Nobel Laureate in Economics"
 	/>

@@ -4,6 +4,7 @@ import Morpher from "../components/Morpher";
 import MainLayout from "../layouts/MainLayout.astro";
 import "../components/misc.css";
 import Benefits from "../components/Benefits.astro";
+import ladyJustice from "../images/justice.svg";
 ---
 
 <MainLayout>
@@ -11,11 +12,7 @@ import Benefits from "../components/Benefits.astro";
 		class="bg-meander_dark [background-size:25px,25px] bg-repeat-x lg:flex lg:flex-row-reverse items-center pb-5 lg:min-h-[80vh]"
 	>
 		<div class="w-full p-[25px]">
-			<img
-				src="/src/images/justice.svg"
-				class="noselect object-contain lg:w-2/3 mx-auto"
-				alt="Lady justice"
-			/>
+			<img src={ladyJustice} class="noselect object-contain lg:w-2/3 mx-auto" alt="Lady justice" />
 		</div>
 		<div>
 			<h1 class="text-[3.5rem] lg:leading-normal pl-2 text-black font-[Poppins] lg:text-[7vw]">
