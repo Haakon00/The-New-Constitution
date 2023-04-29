@@ -8,10 +8,7 @@ module.exports = {
 				meander_light: "url('/meander_light.svg')",
 			},
 			colors: {
-				libyellow: "#F4D35E",
-				libgrey: "#393E41",
-				libsilver: "#C4CAD0",
-				libwhite: "#f9f7f4",
+				libyellow: "#EAAA3A",
 			},
 		},
 	},
