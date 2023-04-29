@@ -1,18 +1,36 @@
 ---
+import simpleX from "../images/icons/simplex.png";
+import simpleXQR from "../images/simpleXQR.png";
 import zcash from "../images/icons/zcash.svg";
-import QR from "../images/QR.png";
+import zcashQR from "../images/QR.png";
 ---
 
 <footer
 	class="footer footer-center p-4 bg-accent text-base-content bg-meander_dark [background-size:25px,25px] bg-repeat-x"
 >
-	<div class="break-all text-xs mt-[25px]">
-		Donate with Zcash: <br
-		/>u1qxkrn50z8aa55nj5wjjjvktvdcwqyetjyf4fvcan6338cty2qv87l3g8jmmtu297gaxw0649gh5a84tppk49s75eq64vvvvga4knkv0dvfg0g0rfw20p7edq0u2kndp3nmwuqugzwygwc5ahes9cnl290pnatt9xm9e5s8x6yn8l4z9u7djaxzax9gufanx89k808hz33aakkwtgpqn
+	<div class="lg:flex justify-between">
+		<div class="lg:w-1/2 lg:p-20">
+			<div class="break-all text-xs mt-[25px]">
+				Contact via SimpleX Chat: <br
+				/>https://simplex.chat/contact#/?v=1-2&smp=smp%3A%2F%2F6iIcWT_dF2zN_w5xzZEY7HI2Prbh3ldP07YTyDexPjE%3D%40smp10.simplex.im%2FimSTj3j2ppmYh8us4bu0cYw6s06WL3Jk%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAhkNGTWzQ6fEAYD2_XVf_ICePoN49Y4YDK2HneLIwUjI%253D%26srv%3Drb2pbttocvnbrngnwziclp2f4ckjq65kebafws6g4hy22cdaiv5dwjqd.onion
+			</div>
+			<div class="flex w-full justify-between items-center mt-5">
+				<img class="h-16 pr-8" src={simpleX} alt="SimpleX Chat logo" />
+				<img class="h-40" src={simpleXQR} alt="QR code for SimpleX Chat address" />
+			</div>
+		</div>
+		<div class="lg:w-1/2 lg:p-20">
+			<div class="break-all text-xs mt-[25px]">
+				Donate with Zcash: <br
+				/>u1qxkrn50z8aa55nj5wjjjvktvdcwqyetjyf4fvcan6338cty2qv87l3g8jmmtu297gaxw0649gh5a84tppk49s75eq64vvvvga4knkv0dvfg0g0rfw20p7edq0u2kndp3nmwuqugzwygwc5ahes9cnl290pnatt9xm9e5s8x6yn8l4z9u7djaxzax9gufanx89k808hz33aakkwtgpqn
+			</div>
+			<div class="flex w-full justify-between lg:justify-center items-center mt-5">
+				<div class="w-full flex justify-center">
+					<img class="h-16 pr-8" src={zcash} alt="ZCash Logo" />
+				</div>
+				<img class="h-40" src={zcashQR} alt="QR code for Zcash donations" />
+			</div>
+		</div>
 	</div>
-	<div class="flex w-full text justify-evenly lg:justify-center">
-		<img class="h-16" src={zcash} alt="ZCash Logo" />
-		<img class="h-40" src={QR} alt="QR code for Zcash donations" />
-	</div>
-	Zcash is a trademark of the Zcash Foundation. Used with permission from the Zcash Foundation
+	Zcash is a trademark of the Zcash Foundation. Used with permission from the Zcash Foundation.
 </footer>
