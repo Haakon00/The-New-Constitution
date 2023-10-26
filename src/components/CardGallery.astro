@@ -22,6 +22,7 @@ import hayek from "../images/portraits/Friedrich-Hayek.jpg";
 >
 	<h2 class="hidden">Quotes</h2>
 	<Card
+		number
 		name="Lysander Spooner"
 		imagepath={spooner}
 		quote={spoonerquote}
@@ -57,17 +58,54 @@ import hayek from "../images/portraits/Friedrich-Hayek.jpg";
 <script>
 	let pressed = false;
 	let carousel = document.getElementById("carousel")!;
+	let startX: number;
+	let scrollLeft: number;
 
 	carousel.addEventListener("mousedown", e => {
 		pressed = true;
+		carousel.classList.add("active");
+		startX = e.pageX - carousel.offsetLeft;
+		scrollLeft = carousel.scrollLeft;
+		cancelMomentumTracking();
 	});
 	carousel.addEventListener("mouseup", () => {
 		pressed = false;
+		carousel.classList.remove("active");
+		beginMomentumTracking();
+	});
+
+	carousel.addEventListener("mouseleave", () => {
+		pressed = false;
+		carousel.classList.remove("active");
 	});
 
 	carousel.addEventListener("mousemove", e => {
 		if (!pressed) return;
 		e.preventDefault();
+		var prevScrollLeft = carousel.scrollLeft;
 		carousel.scrollLeft -= e.movementX;
+		velX = carousel.scrollLeft - prevScrollLeft;
 	});
+
+	var velX = 0;
+	var momentumID: number;
+
+	carousel.addEventListener("wheel", e => {
+		cancelMomentumTracking();
+	});
+
+	function beginMomentumTracking() {
+		cancelMomentumTracking();
+		momentumID = requestAnimationFrame(momentumLoop);
+	}
+	function cancelMomentumTracking() {
+		cancelAnimationFrame(momentumID);
+	}
+	function momentumLoop() {
+		carousel.scrollLeft += velX;
+		velX *= 0.95;
+		if (Math.abs(velX) > 0.5) {
+			momentumID = requestAnimationFrame(momentumLoop);
+		}
+	}
 </script>
