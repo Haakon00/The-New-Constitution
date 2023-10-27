@@ -58,14 +58,14 @@ import hayek from "../images/portraits/Friedrich-Hayek.jpg";
 <script>
 	let pressed = false;
 	let carousel = document.getElementById("carousel")!;
-	let startX: number;
-	let scrollLeft: number;
+	let oldTimeStamp: number;
+	let velocityX = 0;
+	let momentumID: number;
 
 	carousel.addEventListener("mousedown", e => {
 		pressed = true;
+		oldTimeStamp = e.timeStamp;
 		carousel.classList.add("active");
-		startX = e.pageX - carousel.offsetLeft;
-		scrollLeft = carousel.scrollLeft;
 		cancelMomentumTracking();
 	});
 	carousel.addEventListener("mouseup", () => {
@@ -79,19 +79,16 @@ import hayek from "../images/portraits/Friedrich-Hayek.jpg";
 		carousel.classList.remove("active");
 	});
 
+	carousel.addEventListener("wheel", e => {
+		cancelMomentumTracking();
+	});
+
 	carousel.addEventListener("mousemove", e => {
 		if (!pressed) return;
 		e.preventDefault();
-		var prevScrollLeft = carousel.scrollLeft;
 		carousel.scrollLeft -= e.movementX;
-		velX = carousel.scrollLeft - prevScrollLeft;
-	});
-
-	var velX = 0;
-	var momentumID: number;
-
-	carousel.addEventListener("wheel", e => {
-		cancelMomentumTracking();
+		velocityX = (-e.movementX / (e.timeStamp - oldTimeStamp)) * 3;
+		oldTimeStamp = e.timeStamp;
 	});
 
 	function beginMomentumTracking() {
@@ -102,9 +99,9 @@ import hayek from "../images/portraits/Friedrich-Hayek.jpg";
 		cancelAnimationFrame(momentumID);
 	}
 	function momentumLoop() {
-		carousel.scrollLeft += velX;
-		velX *= 0.95;
-		if (Math.abs(velX) > 0.5) {
+		carousel.scrollLeft += velocityX;
+		velocityX *= 0.95;
+		if (Math.abs(velocityX) > 0.5) {
 			momentumID = requestAnimationFrame(momentumLoop);
 		}
 	}
