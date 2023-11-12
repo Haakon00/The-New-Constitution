@@ -24,3 +24,11 @@
 	user-drag: none;
 	-webkit-user-drag: none;
 }
+
+::selection {
+	background: #fca17d;
+}
+
+.footerselection ::selection {
+	background: #00ffa3;
+}
