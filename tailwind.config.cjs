@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
@@ -31,13 +31,15 @@ module.exports = {
 
 					info: "#03E1FF",
 
-					success: "#00FFA3",
+					success: "#89e2d3",
 
 					warning: "#FFCC00",
 
 					error: "#ef4444",
 
 					"base-content": "#393E41",
+
+					"accent-hover": "#fdcdb9",
 				},
 			},
 		],

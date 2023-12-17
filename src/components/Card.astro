@@ -1,3 +1,7 @@
+---
+import { Image } from 'astro:assets';
+---
+
 <article
 	class="flex flex-col justify-between card card-body w-96 bg-secondary text-white shadow-xl flex-none mx-5 border-white border-4 lg:w-[32rem]"
 >
@@ -10,7 +14,7 @@
 		</div>
 		<div class="avatar">
 			<div class="w-24 rounded-full ring ring-white">
-				<img src={Astro.props.imagepath} alt={"Picture of " + Astro.props.name} />
+				<Image src={Astro.props.imagepath} alt={"Picture of " + Astro.props.name} />
 			</div>
 		</div>
 	</footer>
