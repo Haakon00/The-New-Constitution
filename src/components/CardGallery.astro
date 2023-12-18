@@ -18,7 +18,7 @@ import hayek from "../images/portraits/Friedrich-Hayek.jpg";
 <section
 	id="carousel"
 	tabindex="0"
-	class="noscrollbar overflow-x-scroll whitespace-nowrap py-20 flex cursor-grab active:cursor-grabbing"
+	class="noscrollbar overflow-x-scroll whitespace-nowrap py-10 flex cursor-grab active:cursor-grabbing"
 >
 	<h2 class="hidden">Quotes</h2>
 	<Card
@@ -87,7 +87,7 @@ import hayek from "../images/portraits/Friedrich-Hayek.jpg";
 		if (!pressed) return;
 		e.preventDefault();
 		carousel.scrollLeft -= e.movementX;
-		velocityX = (-e.movementX / (e.timeStamp - oldTimeStamp)) * 3;
+		velocityX = (-e.movementX / (e.timeStamp - oldTimeStamp)) * 4;
 		oldTimeStamp = e.timeStamp;
 	});
 
@@ -100,7 +100,7 @@ import hayek from "../images/portraits/Friedrich-Hayek.jpg";
 	}
 	function momentumLoop() {
 		carousel.scrollLeft += velocityX;
-		velocityX *= 0.95;
+		velocityX *= 0.96;
 		if (Math.abs(velocityX) > 0.5) {
 			momentumID = requestAnimationFrame(momentumLoop);
 		}
