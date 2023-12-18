@@ -19,7 +19,7 @@ export default {
 		themes: [
 			{
 				mytheme: {
-					primary: "#fff7dd",
+					primary: "#fff0dd",
 
 					secondary: "#0D1821",
 
@@ -27,19 +27,17 @@ export default {
 
 					neutral: "#393E41",
 
-					"base-100": "#fff7dd",
+					"base-100": "#fff0dd",
 
-					info: "#03E1FF",
+					info: "#2fda95",
 
-					success: "#89e2d3",
+					success: "#fedbcd",
 
 					warning: "#FFCC00",
 
 					error: "#ef4444",
 
 					"base-content": "#393E41",
-
-					"accent-hover": "#fdcdb9",
 				},
 			},
 		],
