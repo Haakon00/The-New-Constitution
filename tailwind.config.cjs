@@ -7,9 +7,6 @@ export default {
 				meander_dark: "url('/meander_dark.svg')",
 				meander_light: "url('/meander_light.svg')",
 			},
-			colors: {
-				libyellow: "#EAAA3A",
-			},
 		},
 	},
 
