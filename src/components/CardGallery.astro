@@ -79,9 +79,13 @@ import hayek from "../assets/portraits/Friedrich-Hayek.jpg";
 		carousel.classList.remove("active");
 	});
 
-	carousel.addEventListener("wheel", e => {
-		cancelMomentumTracking();
-	});
+	carousel.addEventListener(
+		"wheel",
+		e => {
+			cancelMomentumTracking();
+		},
+		{ passive: true }
+	);
 
 	carousel.addEventListener("mousemove", e => {
 		if (!pressed) return;
