@@ -1,27 +1,34 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+import ladyJustice from "../assets/justice.svg";
 import "../misc.css";
+
+export interface Props {
+	title: string;
+	description: string;
+}
+const { description, title } = Astro.props;
 ---
 
 <html lang="en">
 	<head prefix="og: https://ogp.me/ns#">
+		<title>{title}</title>
+		<meta name="description" content={description} />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta
-			name="description"
-			content="A draft of a new and modern constitution which aims to fix structural shortcomings of current constitutions."
-		/>
-		<meta property="og:title" content="The New Constitution" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://newconstitution.pages.dev/" />
 		<meta property="og:image" content="https://newconstitution.pages.dev/justice.png" />
-		<meta
-			property="og:description"
-			content="A draft of a new and modern constitution which aims to fix structural shortcomings of current constitutions."
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="144x144"
+			href="https://newconstitution.pages.dev/favicon.png"
 		/>
-		<link rel="icon" href="https://newconstitution.pages.dev/favicon.png" />
-		<title>The New Constitution</title>
+		<link rel="icon" type="image/svg+xml" sizes="any" href={ladyJustice.src} />
 	</head>
 
 	<body class="text-black">
