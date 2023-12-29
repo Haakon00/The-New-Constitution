@@ -1,7 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
-import ladyJustice from "../assets/justice.svg";
 import "../misc.css";
 
 export interface Props {
@@ -17,8 +16,8 @@ const { description, title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<link rel="icon" type="image/svg+xml" sizes="any" href="/justice.svg" />
 		<link rel="icon" type="image/x-icon" sizes="48x48" href="/favicon.ico" />
-		<link rel="icon" type="image/svg+xml" sizes="any" href={ladyJustice.src} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
