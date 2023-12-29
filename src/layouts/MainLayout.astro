@@ -13,22 +13,17 @@ const { description, title } = Astro.props;
 
 <html lang="en">
 	<head prefix="og: https://ogp.me/ns#">
-		<title>{title}</title>
-		<meta name="description" content={description} />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/x-icon" sizes="48x48" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" sizes="any" href={ladyJustice.src} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://newconstitution.pages.dev/" />
-		<meta property="og:image" content="https://newconstitution.pages.dev/justice.png" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="144x144"
-			href="https://newconstitution.pages.dev/favicon.png"
-		/>
-		<link rel="icon" type="image/svg+xml" sizes="any" href={ladyJustice.src} />
+		<meta property="og:image" content="/justice.png" />
 	</head>
 
 	<body class="text-black">
