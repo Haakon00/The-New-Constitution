@@ -23,8 +23,15 @@ const { description, title } = Astro.props;
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://newconstitution.pages.dev/" />
 		<meta property="og:image" content="/justice.png" />
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "The New Constitution",
+				"url": "https://newconstitution.pages.dev/"
+			}
+		</script>
 	</head>
-
 	<body class="text-black">
 		<Navbar />
 		<main>
